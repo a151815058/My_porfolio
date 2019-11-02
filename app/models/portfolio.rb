@@ -1,4 +1,5 @@
 class Portfolio < ApplicationRecord
+	include Placeholder
 	validates_presence_of :title, :body, :main_image, :thumb_image
 
 	def self.angular
@@ -11,7 +12,7 @@ class Portfolio < ApplicationRecord
 
 	#在create之後，系統會自動產生main與thumb的預設
 	def set_defaults
-		self.main_image ||= "https://via.placeholder.com/600X400.png?"
-		self.thumb_image ||= "https://via.placeholder.com/350X200.png?"
+		self.main_image ||= Placeholder.image_generator(height: '600',width: '400')
+		self.thumb_image ||= Placeholder.image_generator(height: '350' ,width: '200')
 	end
 end
