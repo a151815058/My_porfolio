@@ -1,4 +1,4 @@
-module DeviseWhitelist
+module  DeviseWhitelist
 	extend ActiveSupport::Concern 
 
 	##在included devise_whitelist時，就會自動執行before_action.....
