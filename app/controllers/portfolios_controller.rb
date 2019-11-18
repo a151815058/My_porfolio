@@ -1,6 +1,8 @@
 class PortfoliosController < ApplicationController
 	def index
 		@portfolio_item = Portfolio.all
+
+    @page_title ="My porttfolio website" 
 	end
 
   def angular
