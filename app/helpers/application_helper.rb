@@ -2,7 +2,8 @@ module ApplicationHelper
 
 	##this is test example to display the result on the home page
 	def sample_helper
-		"<p>My Helper</p>".html_safe 
+		## "<p>My Helper</p>".html_safe  bag
+		content_tag(:div,"my content",class: "my-class")
 	end
 
 	def login_helper
@@ -14,5 +15,14 @@ module ApplicationHelper
       		(link_to "Login", new_user_session_path ) 
     	end 
 	end
+
+	def source_helper
+		if session[:source] 
+			greeting = "Thank you for visit me from  #{session[:source]}"
+
+			content_tag(:p,greeting, class: "source-greeting")
+        	
+        end 
+	end 
 end
  
