@@ -3,7 +3,7 @@ class PortfoliosController < ApplicationController
   layout "portfolio"
 
 	def index
-		@portfolio_item = Portfolio.all
+		@portfolio_items = Portfolio.all
 
     @page_title ="My porttfolio website" 
 	end
