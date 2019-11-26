@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.7', '>= 4.7.1' 
 
 gem 'pry', '~> 0.12.2'
+gem 'petergate', '~> 2.0', '>= 2.0.1'
 
 
 # Use Capistrano for deployment
