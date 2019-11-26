@@ -6,8 +6,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
-
+    @blogs = Blog.special_blogs
+    ## byebug
+    ## puts "**"
+    ## puts @blogs.inspect
+    ## puts "**"
     @page_title ="My blogs website" 
   end
 

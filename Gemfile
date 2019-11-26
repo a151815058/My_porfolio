@@ -33,6 +33,10 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 
 gem 'pry', '~> 0.12.2'
 
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
+
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
