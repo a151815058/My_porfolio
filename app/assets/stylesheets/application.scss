@@ -132,3 +132,17 @@ body {
  .auth-link a{
   color: black;
  }
+
+/*因為card外面包著login，所以這樣可以複寫card的型態*/
+.login > .card {
+  width: 30rem;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
