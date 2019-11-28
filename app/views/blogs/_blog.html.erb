@@ -1,9 +1,15 @@
-<tr>
-    <td><%= blog.title.upcase %></td>
-    <td>Pubilshed   <%= distance_of_time_in_words(blog.created_at,Time.now)%> ago </td>
-    <td><%= blog.body %></td>
-    <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
-    <td><%= link_to 'Show', blog %></td>
-    <td><%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin) %></td>
-    <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></td>
-</tr>
+<h2 class="blog-post-title"><%= blog.title.upcase %></h2>
+<p class="blog-post-meta">Pubilshed   <%= distance_of_time_in_words(blog.created_at,Time.now)%> ago </p>
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <%= link_to 'Show', blog ,class: 'breadcrumb-item' %>
+    <%= link_to 'Edit', edit_blog_path(blog),class: 'breadcrumb-item' if logged_in?(:site_admin) %>
+    <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } ,class: 'breadcrumb-item' if logged_in?(:site_admin)  %></a>
+    <%= link_to blog.status, toggle_status_blog_path(blog),class: 'breadcrumb-item' if logged_in?(:site_admin)  %>
+  </ol>
+</nav>
+<p><%= blog.body %></p>
+
+<hr>
+
