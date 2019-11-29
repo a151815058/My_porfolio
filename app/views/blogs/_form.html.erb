@@ -11,22 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :blog_title %>
+    <%= form.text_field :title, id: :blog_title , class: 'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :body %>
-    <%= form.text_area :body, id: :blog_body %>
+    <%= form.text_area :body, id: :blog_body, class: 'form-control' , rows: 20 %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :topic_id %>
-    <%= form.text_area :topic_id, id: :topic_id %>
+    
+    <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Small button
+    </button>
+    <div class="dropdown-menu">
+      <%= form.text_area :topic_id, id: :topic_id , class: 'dropdown-item'%>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Sumbit", class: 'btn btn-primary' %>
   </div>
 <% end %>
+

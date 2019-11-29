@@ -22,12 +22,13 @@
 
 
 
-
+<main role="main" class="container">
+  <div class="row">
     <%= yield %> 
+    <%= render 'shared/blog_silde' %>
+  </div>
 
-
-    <hr>
-
+</main><!-- /.container -->
     
     <%= source_helper %>
   </body>
