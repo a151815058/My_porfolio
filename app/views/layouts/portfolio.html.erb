@@ -11,19 +11,22 @@
   </head>
 
   <body>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-
-
-
+    <%= render 'shared/portfolio_header' %>
+    <main role="main">
+      <%= render 'shared/portfolio_subscribe' %>
     <%= yield %> 
-
+    </main>
     <%= render 'shared/nav',loacation: 'bottom' %>
 
     <hr>
 
     <%= source_helper %>
-    
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+         <a href="#">Back to top</a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
