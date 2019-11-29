@@ -1,5 +1,6 @@
 class Blog < ApplicationRecord
 	enum status: {draft: 0 ,published: 1 }
+	paginates_per 2
 	extend FriendlyId
 	friendly_id :title , use: :slugged
 
@@ -7,8 +8,6 @@ class Blog < ApplicationRecord
 
 	belongs_to :topic
 
-	def self.special_blogs
-		all
-	end
+
 end
   

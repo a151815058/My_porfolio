@@ -8,7 +8,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.special_blogs
+    @blogs = Blog.order(:created_at).page(params[:page])
     ## byebug
     ## puts "**"
     ## puts @blogs.inspect
