@@ -38,6 +38,10 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'carrierwave', '~> 2.0', '>= 2.0.2'
+gem 'carrierwave-aws', '~> 1.4'
+gem 'mini_magick', '~> 4.9', '>= 4.9.5'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
 
 
 
