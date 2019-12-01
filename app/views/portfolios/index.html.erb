@@ -5,8 +5,8 @@
     		<%= link_to "Create a new Portfolio",new_portfolio_url, class: 'btn btn-outline-success' %>
     	<% end %>
     	<hr>
-      <div class="row">
-			<%= render partial:'portfolio_item' ,collection: @portfolio_items %>
+      <div class="row sortable">
+			   <%= render partial:'portfolio_item' ,collection: @portfolio_items %>
       </div>
     </div>
   </div>
