@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
   layout "portfolio"
 
 	def index
-		@portfolio_items = Portfolio.by_position
+		@portfolio_items = Portfolio.order(:created_at).page(params[:page])
 
     @page_title ="My porttfolio website" 
 	end
@@ -70,6 +70,8 @@ class PortfoliosController < ApplicationController
     params.require(:portfolio).permit(:title, 
                                       :subtitle, 
                                       :body , 
+                                      :thumb_image,
+                                      :main_image,
                                       technologies_attributes: [:name])
   end 
 end

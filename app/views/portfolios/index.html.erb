@@ -8,6 +8,8 @@
       <div class="row sortable">
 			   <%= render partial:'portfolio_item' ,collection: @portfolio_items %>
       </div>
+
+      <%= paginate @portfolio_items %>
     </div>
   </div>
  
