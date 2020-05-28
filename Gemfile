@@ -37,7 +37,7 @@ gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem "font-awesome-rails"
-gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'kaminari', '~> 1.2'
 
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'carrierwave', '~> 2.0', '>= 2.0.2'
